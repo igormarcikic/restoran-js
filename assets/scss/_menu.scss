@@ -1,0 +1,64 @@
+.left-menu {
+    display: inline-block;
+    text-align: center;
+    padding: 0;
+    width: 0;
+    height: 100vh;
+    // background-color: rgb(155, 154, 214);
+    box-sizing: border-box;
+    overflow: auto;
+    opacity: 0;
+    transition: all .3s linear 0s;
+
+    .pizza, .pasta, .prilozi, .pice {
+
+        .list-group-item {
+            text-align: left;
+        }
+    }
+
+    .increment, .decrement {
+        cursor: pointer;
+    }
+
+    span {
+        font-weight: 800;
+    }
+}
+
+.right-menu {
+    display: inline-block;
+    text-align: center;
+    padding: 0;
+    width: 0;
+    height: 100vh;
+    // background-color: rgb(155, 154, 214);
+    box-sizing: border-box;
+    overflow: auto;
+    opacity: 0;
+    transition: all .3s linear 0s;
+
+    h4 {
+        border-bottom: 2px solid #000;
+    }
+
+    ul {
+        text-align: left;
+
+        ul {
+            li {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+.show {
+    width: 500px;
+    padding: 20px;
+    opacity: 1;
+}
+
+.disable {
+    pointer-events:none;
+}

@@ -1,0 +1,22 @@
+// Custom bootstrap variable overrides
+@import "bootstrap_variable_overrides";
+@import "bootstrap/bootstrap4";
+
+// Your style
+@import "variables";
+@import "mixins";
+@import "general";
+@import "layout";
+@import "module";
+@import "table";
+@import "burger";
+@import "menu";
+
+body {
+    display: flex;
+    align-items: center;
+}
+
+main {
+    margin-top: 100px;
+}

@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="favicon.ico">
+
+    <title>Bootstrap Stater</title>
+
+    <!-- Icons for this template -->
+    <link href="assets/fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <!-- Stylesheet -->
+    <!-- build:css -->
+    <link href="assets/css/app.css" rel="stylesheet">
+    <!-- endbuild -->
+</head>
+
+<body>
+
+    <div class="left-menu">
+        <div class="pizza">
+            <div class="card mb-3">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Order Pizza:</h5>
+                    <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item" id="pizza-capr">Pizza Capricciosa <span class="float-right"><span class="increment" onclick="addToOrder({tip: 'pizza', name: 'Pizza Capricciosa'})">+</span> <span class="count"> 0 </span> <span class="decrement" onclick="removeFromOrder('Pizza Capricciosa')">-</span></span></li>
+                    <li class="list-group-item" id="pizza-sic">Pizza Siciliana  <span class="float-right"><span class="increment"  onclick="addToOrder({tip: 'pizza', name: 'Pizza Siciliana'})">+</span> <span class="count"> 0 </span> <span class="decrement" onclick="removeFromOrder('Pizza Siciliana')">-</span></span></li>
+                    <li class="list-group-item" id="pizza-carb">Pizza Carbonara  <span class="float-right"><span class="increment"  onclick="addToOrder({tip: 'pizza', name: 'Pizza Carbonara'})">+</span> <span class="count"> 0 </span> <span class="decrement" onclick="removeFromOrder('Pizza Carbonara')">-</span></span></li>
+                    <li class="list-group-item" id="pizza-hung">Pizza Hungariana  <span class="float-right"><span class="increment"  onclick="addToOrder({tip: 'pizza', name: 'Pizza Hungariana'})">+</span> <span class="count"> 0 </span> <span class="decrement" onclick="removeFromOrder('Pizza Hungariana')">-</span></span></li>
+                </ul>
+            </div>
+        </div>
+        <div class="pasta">
+            <div class="card mb-3">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Order Pasta:</h5>
+                    <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item" id="poasta-ita">Pasta Italiana  <span class="float-right"><span class="increment" onclick="addToOrder({tip: 'pasta', name: 'Pasta Italiana'})">+</span> <span class="count"> 0 </span> <span class="decrement" onclick="removeFromOrder('Pasta Italiana')">-</span></span></li>
+                    <li class="list-group-item" id="pasta-car">Pasta Carbonara  <span class="float-right"><span class="increment" onclick="addToOrder({tip: 'pasta', name: 'Pasta Carbonara'})">+</span> <span class="count"> 0 </span> <span class="decrement" onclick="removeFromOrder('Pasta Carbonara')">-</span></span></li>
+                    <li class="list-group-item" id="pasta-sic">Pasta Siciliana  <span class="float-right"><span class="increment" onclick="addToOrder({tip: 'pasta', name: 'Pasta Siciliana'})">+</span> <span class="count"> 0 </span> <span class="decrement" onclick="removeFromOrder('Pasta Siciliana')">-</span></span></li>
+                    <li class="list-group-item" id="pasta-hun">Pasta Hungariana  <span class="float-right"><span class="increment" onclick="addToOrder({tip: 'pasta', name: 'Pasta Hungariana'})">+</span> <span class="count"> 0 </span> <span class="decrement" onclick="removeFromOrder('Pasta Hungariana')">-</span></span></li>
+                    <li class="list-group-item" id="pasta-srb">Pasta Srbiana  <span class="float-right"><span class="increment" onclick="addToOrder({tip: 'pasta', name: 'Pasta Srbiana'})">+</span> <span class="count"> 0 </span> <span class="decrement" onclick="removeFromOrder('Pasta Srbiana')">-</span></span></li>
+                </ul>
+            </div>
+        </div>
+        <div class="prilozi">
+            <div class="card mb-3">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Order Toppings:</h5>
+                    <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item" id="kecap">Kecap  <span class="float-right"><span class="increment" onclick="addToOrder({tip: 'topping', name: 'Kecap'})">+</span> <span class="count"> 0 </span> <span class="decrement" onclick="removeFromOrder('Kecap')">-</span></span></li>
+                    <li class="list-group-item" id="origano">Origano  <span class="float-right"><span class="increment" onclick="addToOrder({tip: 'topping', name: 'Origano'})">+</span> <span class="count"> 0 </span> <span class="decrement" onclick="removeFromOrder('Origano')">-</span></span></li>
+                    <li class="list-group-item" id="ex-cheese">Extra cheese  <span class="float-right"><span class="increment" onclick="addToOrder({tip: 'topping', name: 'Extra cheese'})">+</span> <span class="count"> 0 </span> <span class="decrement" onclick="removeFromOrder('Extra cheese')">-</span></span></li>
+                    <li class="list-group-item" id="urnebes">Urnebes  <span class="float-right"><span class="increment" onclick="addToOrder({tip: 'topping', name: 'Urnebes'})">+</span> <span class="count"> 0 </span> <span class="decrement" onclick="removeFromOrder('Urnebes')">-</span></span></li>
+                    <li class="list-group-item" id="pavlaka">Pavlaka  <span class="float-right"><span class="increment" onclick="addToOrder({tip: 'topping', name: 'Pavlaka'})">+</span> <span class="count"> 0 </span> <span class="decrement" onclick="removeFromOrder('Pavlaka')">-</span></span></li>
+                </ul>
+            </div>
+        </div>
+        <div class="pice">
+            <div class="card mb-3">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Order Drinks:</h5>
+                    <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item" id="coca-cola">Coca Cola  <span class="float-right"><span class="increment" onclick="addToOrder({tip: 'drink', name: 'Coca Cola', volume: 0.5})">+</span> <span class="count"> 0 </span> <span class="decrement" onclick="removeFromOrder('Coca Cola')">-</span></span></li>
+                    <li class="list-group-item" id="borovnica">Borovnica  <span class="float-right"><span class="increment" onclick="addToOrder({tip: 'drink', name: 'Borovnica', volume: 0.25})">+</span> <span class="count"> 0 </span> <span class="decrement" onclick="removeFromOrder('Borovnica')">-</span></span></li>
+                    <li class="list-group-item" id="voda">Voda  <span class="float-right"><span class="increment" onclick="addToOrder({tip: 'drink', name: 'Voda', volume: 0.5})">+</span> <span class="count"> 0 </span> <span class="decrement" onclick="removeFromOrder('Voda')">-</span></span></li>
+                </ul>
+            </div>
+        </div>
+        <button type="button" class="btn btn-success btn-block" onclick="newOrder()">Naruci</button>
+        <button type="button" class="btn btn-danger btn-block" onclick="abandonOrder()">Odustani</button>
+    </div>
+
+<main role="main" class="container">
+    <div class="row">
+        <div class="table col col-md-6" ">
+            <img src="./assets/img/table.jpg" width="300px;" title="Sto broj 1">
+        </div>
+        <div class="table col col-md-6" ">
+            <img src="./assets/img/table.jpg" width="300px;" title="Sto broj 2">
+        </div>
+        <div class="table col col-md-6" ">
+            <img src="./assets/img/table.jpg" width="300px;" title="Sto broj 3">
+        </div>
+        <div class="table col col-md-6" ">
+            <img src="./assets/img/table.jpg" width="300px;" title="Sto broj 4">
+        </div>
+    </div>
+    
+</main>
+
+
+<div class="right-menu">
+    <div class="order-from-db">
+
+    </div>
+    
+    <button type="button" class="btn btn-success btn-block" onclick="pay()">Plati</button>
+    <button type="button" class="btn btn-danger btn-block" onclick="abandonOrder()">Odustani</button>
+</div>
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="assets/js/vendor/jquery.slim.min.js"></script>
+<script src="assets/js/vendor/popper.min.js"></script>
+<script src="assets/js/vendor/bootstrap.min.js"></script>
+<!-- build:js -->
+
+<!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/6.6.1/firebase.js"></script>
+
+<!-- Add Firebase products that you want to use -->
+<script src="https://www.gstatic.com/firebasejs/6.6.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.6.1/firebase-firestore.js"></script>
+<script src="./assets/js/init.js"></script>
+
+<script src="./assets/js/app.js"></script>
+
+<!-- endbuild -->
+</body>
+</html>
